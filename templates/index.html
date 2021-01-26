@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if droplet_info %}
+<table class="pure-table pure-table-bordered">
+    <colgroup>
+        <col class="droplet-name">
+        <col class="droplet-status">
+        <col class="droplet-memory">
+        <col class="droplet-vcpus">
+        <col class="droplet-disk">
+        <col class="droplet-distro">
+        <col class="droplet-region">
+        <col class="droplet-networking">
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+            <th scope="col">Memory</th>
+            <th scope="col">vCPUs</th>
+            <th scope="col">Disk</th>
+            <th scope="col">Distro</th>
+            <th scope="col">Region</th>
+            <th scope="col">Networking</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for droplet in droplet_info %}
+        <tr>
+            <td>{{ droplet.name }}</td>
+            <td>{{ droplet.status|capitalize }}</td>
+            <td>{{ droplet.memory }}</td>
+            <td>{{ droplet.vcpus }}</td>
+            <td>{{ droplet.disk }} GB</td>
+            <td>{{ droplet.distro }}</td>
+            <td>{{ droplet.region_slug|upper }}</td>
+            <td>
+                <ul>
+                    <li>IPv4 Public: {{ droplet.ipv4_public }}</li>
+                    {% if droplet.ipv4_private %}
+                    <li>IPv4 Private: {{ droplet.ipv4_private }}</li>
+                    {% endif %}
+                    {% if droplet.ipv6_public %}
+                    <li>IPv6 Public: {{ droplet.ipv6_public }}</li>
+                    {% endif %}
+                    {% if droplet.ipv6_private %}
+                    <li>IPv6 Private: {{ droplet.ipv6_private }}</li>
+                    {% endif %}
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock content %}

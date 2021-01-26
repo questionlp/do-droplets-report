@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DigitalOcean Droplets</title>
+    <!-- Import Pure CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pure-min.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700%7CIBM+Plex+Mono:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!-- Import Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% endblock head %}
+</head>
+
+<body>
+<header>
+    <h1>DigitalOcean Droplets</h1>
+</header>
+
+<main>
+    {% block main %}
+    {% block content %}{% endblock %}
+    {% endblock main %}
+</main>
+
+<footer>
+    <div id="timestamp">R: {{ rendered_time }}</div>
+</footer>
+</body>
+</html>
