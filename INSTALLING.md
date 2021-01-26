@@ -5,18 +5,18 @@
 The following instructions target Ubuntu 18.04 LTS
 
 * Rename `uwsgi.dist.ini` to `uwsgi.ini`
-* Copy `uwsgi.dist.service` to `/etc/systemd/system/<API Service Name>.service`
+* Copy `uwsgi.dist.service` to `/etc/systemd/system/<Service Name>.service`
 * Run:
 
 ```bash
-    sudo systemctl start <API Service Name>
-    sudo systemctl enable <API Service Name>
+    sudo systemctl start <Service Name>
+    sudo systemctl enable <Service Name>
 ```
 
 * Verify service status
 
 ```bash
-    sudo systemctl status <API Service Name>
+    sudo systemctl status <Service Name>
 ```
 
 ## Setting up NGINX to Serve Static Files
