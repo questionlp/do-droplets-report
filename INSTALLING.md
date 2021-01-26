@@ -1,5 +1,11 @@
 # INSTALLING
 
+## Setting Up .env File
+
+Copy the `.env.dist` file in the top-level directory and name it `.env`
+and change the `DO_API_KEY` value to the API key generated through your
+DigitalOcean account portal.
+
 ## Installing uWSGI Service
 
 The following instructions target Ubuntu 18.04 LTS
