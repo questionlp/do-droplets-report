@@ -37,15 +37,15 @@
             <td>{{ droplet.region_slug|upper }}</td>
             <td>
                 <ul>
-                    <li>IPv4 Public: {{ droplet.ipv4_public }}</li>
+                    <li><b>IPv4 Public:</b> {{ droplet.ipv4_public }}</li>
                     {% if droplet.ipv4_private %}
-                    <li>IPv4 Private: {{ droplet.ipv4_private }}</li>
+                    <li><b>IPv4 Private:</b> {{ droplet.ipv4_private }}</li>
                     {% endif %}
                     {% if droplet.ipv6_public %}
-                    <li>IPv6 Public: {{ droplet.ipv6_public }}</li>
+                    <li><b>IPv6 Public:</b> {{ droplet.ipv6_public }}</li>
                     {% endif %}
                     {% if droplet.ipv6_private %}
-                    <li>IPv6 Private: {{ droplet.ipv6_private }}</li>
+                    <li><b>IPv6 Private:</b> {{ droplet.ipv6_private }}</li>
                     {% endif %}
                 </ul>
             </td>
