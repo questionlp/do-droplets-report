@@ -115,8 +115,11 @@ def index():
 
         do_droplets.append(droplet_info)
 
+    # Sort list based on droplet name
+    do_droplets_sorted = sorted(do_droplets, key = lambda i: i["name"])
+
     return render_template("index.html",
-                           droplet_info=do_droplets,
+                           droplet_info=do_droplets_sorted,
                            rendered_time=rendered_time)
 
 #endregion
