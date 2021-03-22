@@ -98,6 +98,7 @@ def index():
         droplet_info["distro"] = droplet["image"]["distribution"]
         droplet_info["region_name"] = droplet["region"]["name"]
         droplet_info["region_slug"] = droplet["region"]["slug"]
+        droplet_info["tags"] = droplet["tags"]
         droplet_networks = droplet["networks"]
 
         for ipv4_networks in droplet_networks["v4"]:
