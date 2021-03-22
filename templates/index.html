@@ -28,7 +28,7 @@
     <tbody>
     {% for droplet in droplet_info %}
         <tr>
-            <td>{{ droplet.name }}</td>
+            <td rowspan="2">{{ droplet.name }}</td>
             <td>{{ droplet.status|capitalize }}</td>
             <td>{{ droplet.memory }}</td>
             <td>{{ droplet.vcpus }}</td>
@@ -47,6 +47,18 @@
                     {% if droplet.ipv6_private %}
                     <li><b>IPv6 Private:</b> {{ droplet.ipv6_private }}</li>
                     {% endif %}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="tags">
+                <strong>Tags</strong>
+            </td>
+            <td colspan="6">
+                <ul class="droplet-tags">
+                    {% for tag in droplet.tags %}
+                    <li>{{ tag }}</li>
+                    {% endfor %}
                 </ul>
             </td>
         </tr>
