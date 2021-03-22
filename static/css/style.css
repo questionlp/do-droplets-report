@@ -12,4 +12,6 @@
     table.pure-table td ul { list-style: none; margin: 0; padding: 0; }
     td.no-data { background-color: rgb(240, 240, 240); }
     footer { font-size: 90%; line-height: 1.25rem; margin-top: 1.5rem; }
+    ul.droplet-tags { display: inline-block; list-style: none; padding: 0; }
+    ul.droplet-tags > li { background-color: #eee; color: initial; display: inline-block; list-style: none; margin: 0 0.5rem 0 0; padding: 0.25rem 0.5rem; }
 }
