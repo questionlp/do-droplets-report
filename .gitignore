@@ -1,10 +1,29 @@
 # Ignore venv directory
 venv/
 
+# Ignore the default configuration files
+.env
+config.json
+gunicorn.conf.py
+
 # Ignore uWSGI configuration and related files
 uwsgi.ini
 uwsgi.service
 *.sock
+
+# Ignore local log directory
+_log/*
+_log/*
+
+# Ignore robots.txt
+app/static/robots.txt
+
+# Ignore New Relic Agent config file
+newrelic.ini
+
+# Ignore macOS DS_Store files
+.DS_Store
+
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python

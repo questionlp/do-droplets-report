@@ -4,7 +4,7 @@
     {% block head %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DigitalOcean Droplets</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <!-- Import Pure CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pure-min.css') }}">
@@ -17,18 +17,11 @@
 </head>
 
 <body>
-<header>
-    <h1>DigitalOcean Droplets</h1>
-</header>
-
 <main>
-    {% block main %}
-    {% block content %}{% endblock %}
-    {% endblock main %}
+
+{% block content %}{% endblock %}
+
 </main>
 
-<footer>
-    <div id="timestamp">R: {{ rendered_time }}</div>
-</footer>
 </body>
 </html>
