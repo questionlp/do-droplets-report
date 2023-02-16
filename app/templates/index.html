@@ -16,7 +16,7 @@
     <thead>
         <tr>
             <th scope="col">Name</th>
-            <th scope="col">Status</th>
+            <th scope="col">Class</th>
             <th scope="col">Memory</th>
             <th scope="col">vCPUs</th>
             <th scope="col">Disk</th>
@@ -28,8 +28,13 @@
     <tbody>
     {% for droplet in droplet_info %}
         <tr>
-            <td rowspan="2">{{ droplet.name }}</td>
-            <td>{{ droplet.status|capitalize }}</td>
+            <td rowspan="2">
+                <div>{{ droplet.name }}</div>
+                <div>
+                    <b>Status:</b> {{ droplet.status|capitalize }}
+                </div>
+            </td>
+            <td>{{ droplet.description }}</td>
             <td>{{ droplet.memory }}</td>
             <td>{{ droplet.vcpus }}</td>
             <td>{{ droplet.disk }} GB</td>
