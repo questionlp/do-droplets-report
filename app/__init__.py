@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
-# vim: set noai syntax=python ts=4 sw=4:
-#
-# Copyright (c) 2021-2022 Linh Pham
+# Copyright (c) 2021-2024 Linh Pham
 # do-droplets-report is released under the terms of the Apache License 2.0
-"""Core Application for DigitalOcean Droplets Report"""
+# SPDX-License-Identifier: Apache-2.0
+#
+# vim: set noai syntax=python ts=4 sw=4:
+"""Core Application for DigitalOcean Droplets Report."""
 from flask import Flask
 
 from app import config, utility
@@ -31,7 +31,7 @@ def create_app():
     # Set up Jinja globals
     app.jinja_env.globals["app_version"] = APP_VERSION
     app.jinja_env.globals["rendered_at"] = utility.generate_date_time_stamp
-    app.jinja_env.globals["time_zone"] = app.config["app_settings"]["app_time_zone"]
+    app.jinja_env.globals["time_zone"] = app.config["app_settings"]["time_zone"]
 
     # Register application blueprints
     app.register_blueprint(main_bp)
