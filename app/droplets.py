@@ -1,20 +1,21 @@
-# -*- coding: utf-8 -*-
-# vim: set noai syntax=python ts=4 sw=4:
-#
-# Copyright (c) 2021-2022 Linh Pham
+# Copyright (c) 2021-2024 Linh Pham
 # do-droplets-report is released under the terms of the Apache License 2.0
-"""Utility Functions for DigitalOcean Droplets Report"""
+# SPDX-License-Identifier: Apache-2.0
+#
+# vim: set noai syntax=python ts=4 sw=4:
+"""Utility Functions for DigitalOcean Droplets Report."""
 from typing import Dict
 
 import requests
 
 
 def retrieve_droplets(api_key: str, api_url: str) -> Dict:
+    """Retrieve droplets using DigitalOcean's API."""
     if not api_key or not api_url:
         return None
 
-    api_request = requests.get(url=api_url, auth=(api_key, ""))
-    if not api_request.status_code == 200:
+    api_request = requests.get(url=api_url, auth=(api_key, ""), timeout=15)
+    if api_request.status_code != 200:
         return None
 
     api_response = api_request.json()
