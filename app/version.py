@@ -4,4 +4,4 @@
 #
 # vim: set noai syntax=python ts=4 sw=4:
 """Application Version for DigitalOcean Droplets Report."""
-APP_VERSION = "2.0.1"
+APP_VERSION = "2.0.2"
