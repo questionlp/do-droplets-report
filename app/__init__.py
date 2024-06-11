@@ -13,6 +13,7 @@ from app.version import APP_VERSION
 
 
 def create_app():
+    """Initialize Flask and Configure Settings."""
     app = Flask(__name__)
     app.url_map.strict_slashes = False
 
