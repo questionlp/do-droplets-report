@@ -6,7 +6,7 @@ This report retrieves a list of DigitalOcean droplets for a given account and di
 
 ## Requirements
 
-- Python 3.8 or newer (Python 2.x is not supported)
+- Python 3.10 or newer (Python 2.x is not supported)
 - DigitalOcean API Key
 
 ## Installation

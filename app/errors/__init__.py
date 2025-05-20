@@ -1,4 +1,4 @@
-# Copyright (c) 2021-2024 Linh Pham
+# Copyright (c) 2021-2025 Linh Pham
 # do-droplets-report is released under the terms of the Apache License 2.0
 # SPDX-License-Identifier: Apache-2.0
 #
