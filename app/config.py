@@ -1,4 +1,4 @@
-# Copyright (c) 2021-2024 Linh Pham
+# Copyright (c) 2021-2025 Linh Pham
 # do-droplets-report is released under the terms of the Apache License 2.0
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -6,16 +6,14 @@
 """Main Routes for DigitalOcean Droplets Report."""
 import json
 from pathlib import Path
-from typing import Any, Dict
-
-import pytz
+from typing import Any
 
 from . import utility
 
 
 def load_config(
     config_file_path: str = "config.json", app_time_zone: str = "UTC"
-) -> Dict[str, Dict[str, Any]]:
+) -> dict[str, dict[str, Any]]:
     """Load settings from config.json."""
     _config_file_path = Path(config_file_path)
     with _config_file_path.open(mode="r", encoding="utf-8") as config_file:

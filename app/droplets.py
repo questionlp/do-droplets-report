@@ -1,15 +1,14 @@
-# Copyright (c) 2021-2024 Linh Pham
+# Copyright (c) 2021-2025 Linh Pham
 # do-droplets-report is released under the terms of the Apache License 2.0
 # SPDX-License-Identifier: Apache-2.0
 #
 # vim: set noai syntax=python ts=4 sw=4:
 """Utility Functions for DigitalOcean Droplets Report."""
-from typing import Dict
 
 import requests
 
 
-def retrieve_droplets(api_key: str, api_url: str) -> Dict:
+def retrieve_droplets(api_key: str, api_url: str) -> dict:
     """Retrieve droplets using DigitalOcean's API."""
     if not api_key or not api_url:
         return None
